@@ -17,7 +17,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t cdnd-03-ms-user .
-  - docker tag simple-node chk86/cdnd-03-ms-user:latest
+  - docker tag cdnd-03-ms-user chk86/cdnd-03-ms-user:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
